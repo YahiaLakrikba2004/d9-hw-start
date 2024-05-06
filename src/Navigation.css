@@ -1,0 +1,16 @@
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navigation-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.navigation-link:hover {
+  color: #0056b3;
+}
