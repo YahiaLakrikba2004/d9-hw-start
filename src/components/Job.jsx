@@ -5,13 +5,13 @@ import {} from 'bootstrap/dist/css/bootstrap.min.css'
 
 const Job = ({ data }) => {
   const dispatch = useDispatch();
-  const favorites = useSelector(state => state.favorites);
+  const favorites = useSelector(state => state.favorites.content);
 
-  const isFavorite = Object.keys(favorites).includes(data.company_name);
+  const isFavorite = favorites.includes(data.company_name);
 
-  const handleAddToFavorites = async (company) => {
+  const handleAddToFavorites = (company) => {
     try {
-      await dispatch({ type: 'ADD_TO_FAVORITES', payload: company });
+       dispatch({ type: 'ADD_TO_FAVORITES', payload: company });
       console.log(`Added ${company} to favorites`);
     } catch (error) {
       console.error(`Failed to add ${company} to favorites: ${error}`);

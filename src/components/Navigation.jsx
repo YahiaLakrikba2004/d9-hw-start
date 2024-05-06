@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../Navigation.css'; // Assicurati di creare questo file CSS
+import '../Navigation.css'; 
 
 const Navigation = () => (
   <nav className="navigation">
